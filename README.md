@@ -7,7 +7,7 @@
 
 ## 📝 Brief Description  
 The platform allows parents to send notes, set reminders, and suggest fun bonding activities. Children can respond with reactions, mood check-ins, and messages. Users can form private groups to stay connected with family and friends. With a user-friendly interface and role-based dashboards, FamilyConnect promotes mindful parenting and emotional well-being in everyday life.
-
+ 
 ---
 
 ## 🗓️ Day-by-Day Plan (2 Weeks Capstone Journey)

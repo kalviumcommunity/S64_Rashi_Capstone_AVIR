@@ -40,3 +40,16 @@ The platform allows parents to send notes, set reminders, and suggest fun bondin
 
 
 Thank you for checking out **AVIR** – a space where meaningful connections grow every day.
+
+---
+
+# 🚀 Initialized React Frontend – Capstone Task
+
+## 📌 Task Overview
+This task is to demonstrate your understanding of setting up a React frontend using Vite. You will initialize the frontend app in a `client` folder, push your changes to GitHub, raise a PR, request a CodiumAI review, and record a walkthrough video.
+
+---
+
+### FRONTEND DEPLOYED LINK:-
+https://avir123.netlify.app/
+---

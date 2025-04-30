@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 const activitySchema = new mongoose.Schema({
     title: String,
     description: String,
@@ -7,3 +8,7 @@ const activitySchema = new mongoose.Schema({
     completed: { type: Boolean, default: false },
   }, { timestamps: true });
   
+
+  const Activity =  mongoose.model("Activity", activitySchema);
+  
+  export default Activity;

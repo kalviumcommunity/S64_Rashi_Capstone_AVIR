@@ -54,3 +54,10 @@ This task is to demonstrate your understanding of setting up a React frontend us
 https://avir123.netlify.app/
 
 ---
+
+
+### BACKEND DEPLOYED LINK:-
+https://s64-rashi-capstone-avir.onrender.com
+
+
+---

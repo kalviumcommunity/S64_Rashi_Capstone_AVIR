@@ -2,30 +2,30 @@ import express from 'express';
 import Snap from '../models/snap.js';
 const router = express.Router();
 
+
+
+// POST - Create a new snap
 router.post('/', async (req, res) => {
-  const snap = new Snap(req.body);
-  const saved = await snap.save();
-  res.status(201).json(saved);
+  try {
+    const newSnap = new Snap(req.body);
+    const savedSnap = await newSnap.save();
+    res.status(201).json(savedSnap);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
+// GET - Get all snaps
 router.get('/', async (req, res) => {
-  const snaps = await Snap.find();
-  res.json(snaps);
+  try {
+    const snaps = await Snap.find();
+    res.json(snaps);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-router.get('/:id', async (req, res) => {
-  const snap = await Snap.findById(req.params.id);
-  res.json(snap);
-});
 
-router.put('/:id', async (req, res) => {
-  const updated = await Snap.findByIdAndUpdate(req.params.id, req.body, { new: true });
-  res.json(updated);
-});
 
-router.delete('/:id', async (req, res) => {
-  await Snap.findByIdAndDelete(req.params.id);
-  res.sendStatus(204);
-});
 
 export default router;

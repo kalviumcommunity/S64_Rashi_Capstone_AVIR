@@ -25,10 +25,24 @@ router.get('/', async (req, res) => {
 });
 
 // PUT - Update a user by ID
-router.put('/:id', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
-    const updated = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    res.json(updated);
+    const { name, email, password } = req.body;
+
+    if (!name || !email || !password) {
+      return res.status(400).json({ error: "Name, email, and password are required" });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const newUser = new User({
+      name,
+      email,
+      password: hashedPassword,
+    });
+
+    const savedUser = await newUser.save();
+    res.status(201).json({ message: "User created successfully", user: savedUser });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

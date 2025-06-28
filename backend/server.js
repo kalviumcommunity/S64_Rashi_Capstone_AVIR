@@ -19,7 +19,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allow all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Optional: specify allowed methods
+  allowedHeaders: ['Content-Type', 'Authorization'] // Optional: specify allowed headers
+}));
+
 app.use(express.json());
 
 // Test route
@@ -28,7 +33,7 @@ app.get("/", (req, res) => {
 });
 
 // API Routes
-app.use('/api/Users', UserRoutes);
+app.use('/api/users', UserRoutes);
 app.use('/api/Activities', ActivityRoutes);
 app.use('/api/Notes', NoteRoutes);
 app.use('/api/snaps', snapRoutes);

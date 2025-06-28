@@ -1,0 +1,48 @@
+/* ...existing code... */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #22223b;
+  padding: 0 32px;
+  height: 60px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.navbar-logo {
+  position: absolute;
+  left: 32px;
+}
+
+.logo-text {
+  color: #f2e9e4;
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  width: 100%;
+}
+/* ...existing code... */ 
+
+.navbar-links li a {
+  color: #c9ada7;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links li a:hover {
+  color: #9a8c98;
+}

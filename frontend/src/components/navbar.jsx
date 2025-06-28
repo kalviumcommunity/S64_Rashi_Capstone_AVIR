@@ -15,8 +15,8 @@ const Navbar = () => {
         <li><a href="/calendar">Calendar</a></li>
         <li><a href="/mood">Mood</a></li>
       </ul>
-    </nav>
+    </nav> 
   );
-};
+}; 
 
 export default Navbar;

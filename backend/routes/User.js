@@ -1,10 +1,11 @@
 import express from 'express';
 import User from '../models/User.js';
+import bcrypt from 'bcryptjs';
 
 const router = express.Router();
 
 // POST - Create new user
-router.post('/', async (req, res) => {
+router.post('/login', async (req, res) => {
   try {
     const newUser = new User(req.body);
     const saved = await newUser.save();
@@ -15,7 +16,7 @@ router.post('/', async (req, res) => {
 });
 
 // GET - Get all users
-router.get('/', async (req, res) => {
+router.get('/getAllUser', async (req, res) => {
   try {
     const users = await User.find();
     res.json(users);
@@ -25,7 +26,7 @@ router.get('/', async (req, res) => {
 });
 
 // PUT - Update a user by ID
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
